@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XP Calculator</title>
+    <script>
+        function calculateTotal() {
+            // Get the input values
+            const greenCount = document.getElementById("greenCount").value;
+            const blueCount = document.getElementById("blueCount").value;
+            const pinkCount = document.getElementById("pinkCount").value;
+
+            // Calculate the total XP
+            const greenXP = 100 * greenCount;
+            const blueXP = 600 * blueCount;
+            const pinkXP = 3000 * pinkCount;
+            const totalXP = greenXP + blueXP + pinkXP;
+
+            // Display the total XP
+            document.getElementById("totalXP").textContent = `Grand Total = ${totalXP} XP`;
+        }
+    </script>
+</head>
+<body>
+    <h1>XP Calculator</h1>
+    <div>
+        <label for="greenCount">Green (100 XP): </label>
+        <input type="number" id="greenCount" oninput="calculateTotal()">
+    </div>
+    <div>
+        <label for="blueCount">Blue (600 XP): </label>
+        <input type="number" id="blueCount" oninput="calculateTotal()">
+    </div>
+    <div>
+        <label for="pinkCount">Pink (3000 XP): </label>
+        <input type="number" id="pinkCount" oninput="calculateTotal()">
+    </div>
+    <h2 id="totalXP">Grand Total = 0 XP</h2>
+</body>
+</html>
