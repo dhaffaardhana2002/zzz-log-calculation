@@ -3,39 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XP Calculator</title>
+    <title>ZZZ XP Calculator</title>
     <script>
-        function calculateTotal() {
+        function calculateTotal1() {
             // Get the input values
-            const greenCount = document.getElementById("greenCount").value;
-            const blueCount = document.getElementById("blueCount").value;
-            const pinkCount = document.getElementById("pinkCount").value;
+            const green1 = document.getElementById("green1").value;
+            const blue1 = document.getElementById("blue1").value;
+            const pink1 = document.getElementById("pink1").value;
 
             // Calculate the total XP
-            const greenXP = 100 * greenCount;
-            const blueXP = 600 * blueCount;
-            const pinkXP = 3000 * pinkCount;
-            const totalXP = greenXP + blueXP + pinkXP;
+            const greenXP1 = 100 * green1;
+            const blueXP1 = 600 * blue1;
+            const pinkXP1 = 3000 * pink1;
+            const totalXP1 = greenXP1 + blueXP1 + pinkXP1;
 
             // Display the total XP
-            document.getElementById("totalXP").textContent = `Grand Total = ${totalXP} XP`;
+            document.getElementById("totalXP1").textContent = `Grand Total = ${totalXP1} XP`;
+        }
+
+        function calculateTotal2() {
+            // Get the input values
+            const green2 = document.getElementById("green2").value;
+            const blue2 = document.getElementById("blue2").value;
+            const pink2 = document.getElementById("pink2").value;
+
+            // Calculate the total XP
+            const greenXP2 = 100 * green2;
+            const blueXP2 = 500 * blue2;
+            const pinkXP2 = 2000 * pink2;
+            const totalXP2 = greenXP2 + blueXP2 + pinkXP2;
+
+            // Display the total XP
+            document.getElementById("totalXP2").textContent = `Grand Total = ${totalXP2} XP`;
         }
     </script>
 </head>
 <body>
-    <h1>XP Calculator</h1>
+    <h1>Agent & W-Engine Level XP Calculator</h1>
     <div>
-        <label for="greenCount">Green (100 XP): </label>
-        <input type="number" id="greenCount" oninput="calculateTotal()">
+        <label for="green1">Green (100 XP): </label>
+        <input type="number" id="green1" oninput="calculateTotal1()">
     </div>
     <div>
-        <label for="blueCount">Blue (600 XP): </label>
-        <input type="number" id="blueCount" oninput="calculateTotal()">
+        <label for="blue1">Blue (600 XP): </label>
+        <input type="number" id="blue1" oninput="calculateTotal1()">
     </div>
     <div>
-        <label for="pinkCount">Pink (3000 XP): </label>
-        <input type="number" id="pinkCount" oninput="calculateTotal()">
+        <label for="pink1">Pink (3000 XP): </label>
+        <input type="number" id="pink1" oninput="calculateTotal1()">
     </div>
-    <h2 id="totalXP">Grand Total = 0 XP</h2>
+    <h2 id="totalXP1">Grand Total = 0 XP</h2>
+
+    <h1>Disk Drive Level XP Calculator</h1>
+    <div>
+        <label for="green2">Green (100 XP): </label>
+        <input type="number" id="green2" oninput="calculateTotal2()">
+    </div>
+    <div>
+        <label for="blue2">Blue (600 XP): </label>
+        <input type="number" id="blue2" oninput="calculateTotal2()">
+    </div>
+    <div>
+        <label for="pink2">Pink (3000 XP): </label>
+        <input type="number" id="pink2" oninput="calculateTotal2()">
+    </div>
+    <h2 id="totalXP2">Grand Total = 0 XP</h2>
 </body>
 </html>
