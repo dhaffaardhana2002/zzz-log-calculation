@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>ZZZ XP Calculator</title>
     <script>
         function calculateTotal1() {
@@ -18,7 +19,7 @@
             const totalXP1 = greenXP1 + blueXP1 + pinkXP1;
 
             // Display the total XP
-            document.getElementById("totalXP1").textContent = `Grand Total = ${totalXP1} XP`;
+            document.getElementById("totalXP1").textContent = `${totalXP1} XP`;
         }
 
         function calculateTotal2() {
@@ -34,40 +35,120 @@
             const totalXP2 = greenXP2 + blueXP2 + pinkXP2;
 
             // Display the total XP
-            document.getElementById("totalXP2").textContent = `Grand Total = ${totalXP2} XP`;
+            document.getElementById("totalXP2").textContent = `${totalXP2} XP`;
         }
+
+		function calculateTotal3() {
+			const green3 = document.getElementById("green3").value;
+			const blue3 = document.getElementById("blue3").value;
+			const pink3 = document.getElementById("pink3").value;
+
+			const greenXP3 = 100 * green3;
+			const blueXP3 = 600 * blue3;
+			const pinkXP3 = 3000 * pink3;
+			const totalXP3 = greenXP3 + blueXP3 + pinkXP3;
+
+			document.getElementById("totalXP3").textContent = `${totalXP3} XP`;
+		}
     </script>
 </head>
 <body>
     <h1>ZZZ XP Calculator</h1>
-    <h2>Agent & W-Engine Level XP Calculator</h2>
-    <div>
-        <label for="green1">Green (100 XP): </label>
-        <input type="number" id="green1" oninput="calculateTotal1()">
-    </div>
-    <div>
-        <label for="blue1">Blue (600 XP): </label>
-        <input type="number" id="blue1" oninput="calculateTotal1()">
-    </div>
-    <div>
-        <label for="pink1">Pink (3000 XP): </label>
-        <input type="number" id="pink1" oninput="calculateTotal1()">
-    </div>
-    <h3 id="totalXP1">Grand Total = 0 XP</h3>
-<hr>
-    <h2>Disk Drive Level XP Calculator</h2>
-    <div>
-        <label for="green2">Green (100 XP): </label>
-        <input type="number" id="green2" oninput="calculateTotal2()">
-    </div>
-    <div>
-        <label for="blue2">Blue (500 XP): </label>
-        <input type="number" id="blue2" oninput="calculateTotal2()">
-    </div>
-    <div>
-        <label for="pink2">Pink (2000 XP): </label>
-        <input type="number" id="pink2" oninput="calculateTotal2()">
-    </div>
-    <h3 id="totalXP2">Grand Total = 0 XP</h3>
+    <main>
+        <h2>Agent Level XP</h2>
+		<div class="bahan-utama">
+			<div class="bahan">
+				<label for="green1">
+					<img src="img/log-c.webp" alt="Green">
+					<span>100 XP</span>
+				</label>
+				<input type="number" id="green1" oninput="calculateTotal1()" min="0">
+			</div>
+			<div class="bahan">
+				<label for="blue1">
+					<img src="img/log-b.webp" alt="Blue">
+					<span>600 XP</span>
+				</label>
+				<input type="number" id="blue1" oninput="calculateTotal1()" min="0">
+			</div>
+			<div class="bahan">
+				<label for="pink1">
+					<img src="img/log-a.webp" alt="Pink">
+					<span>3000 XP</span>
+				</label>
+				<input type="number" id="pink1" oninput="calculateTotal1()" min="0">
+			</div>
+		</div>
+		<div class="total-bahan">
+			<span class="total-text">Grand Total</span>
+			<span id="totalXP1">0 XP</span>
+		</div>
+
+
+		<hr>
+
+		<h2>Wengine Level XP</h2>
+		<div class="bahan-utama">
+			<div class="bahan">
+				<label for="green3">
+					<img src="img/wengine-c.webp" alt="Green">
+					<span>100 XP</span>
+				</label>
+				<input type="number" id="green3" oninput="calculateTotal3()" min="0">
+			</div>
+			<div class="bahan">
+				<label for="blue3">
+					<img src="img/wengine-b.webp" alt="Blue">
+					<span>600 XP</span>
+				</label>
+				<input type="number" id="blue3" oninput="calculateTotal3()" min="0">
+			</div>
+			<div class="bahan">
+				<label for="pink3">
+					<img src="img/wengine-a.webp" alt="Pink">
+					<span>3000 XP</span>
+				</label>
+				<input type="number" id="pink3" oninput="calculateTotal3()" min="0">
+			</div>
+		</div>
+		<div class="total-bahan">
+			<span class="total-text">Grand Total</span>
+			<span id="totalXP3">0 XP</span>
+		</div>
+
+		<hr>
+		
+		<h2>Plating Level XP</h2>
+		<div class="bahan-utama">
+			<div class="bahan">
+				<label for="green2">
+					<img src="img/plating-c.webp" alt="Green">
+					<span>100 XP</span>
+				</label>
+				<input type="number" id="green2" oninput="calculateTotal2()" min="0">
+			</div>
+			<div class="bahan">
+				<label for="blue2">
+					<img src="img/plating-b.webp" alt="Blue">
+					<span>500 XP</span>
+				</label>
+				<input type="number" id="blue2" oninput="calculateTotal2()" min="0">
+			</div>
+			<div class="bahan">
+				<label for="pink2">
+					<img src="img/plating-a.webp" alt="Pink">
+					<span>2000 XP</span>
+				</label>
+				<input type="number" id="pink2" oninput="calculateTotal2()" min="0">
+			</div>
+		</div>
+		<div class="total-bahan">
+			<span class="total-text">Grand Total</span>
+			<span id="totalXP2">0 XP</span>
+		</div>
+	</main>
+	<footer>
+		<p>Made with ❤️ by <a href="https://github.com/dhaffaardhana2002">Dhaffa Ardhana</a></p>
+	</footer>
 </body>
 </html>
